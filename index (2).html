@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1724">
+  <meta name="description" content="Portfolio of Nesma El-Shenawy Zahran — AI Data Evaluation, Digital Tasks, and Data Quality.">
+  <title>Nesma El-Shenawy Zahran | AI Data Evaluation</title>
+  <style>
+    :root {
+      --bg: #08131f;
+      --panel: rgba(17, 35, 52, .78);
+      --panel-strong: #12283b;
+      --ink: #edf5f7;
+      --muted: #a8bbc7;
+      --teal: #55dfcf;
+      --teal-dark: #1d9e9b;
+      --line: rgba(190, 220, 228, .15);
+      --shadow: 0 24px 70px rgba(0,0,0,.25);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 88% 4%, rgba(37, 175, 169, .19), transparent 32rem),
+        radial-gradient(ellipse at 2% 42%, rgba(40, 105, 153, .16), transparent 34rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 24px 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 750; letter-spacing: .02em; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; color: #06131e; background: var(--teal); font-weight: 900; }
+    .nav-links { display: flex; gap: 24px; color: var(--muted); font-size: .94rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--teal); }
+    .hero { display: grid; grid-template-columns: 1.35fr .65fr; gap: 28px; align-items: stretch; padding: 54px 0 38px; }
+    .hero-copy, .profile-card, .section-card { border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+    .hero-copy { border-radius: 30px; padding: clamp(28px, 5vw, 58px); position: relative; overflow: hidden; }
+    .hero-copy:after { content: ""; position: absolute; width: 280px; height: 280px; border: 1px solid rgba(85,223,207,.18); border-radius: 50%; right: -116px; bottom: -160px; box-shadow: 0 0 0 30px rgba(85,223,207,.025), 0 0 0 60px rgba(85,223,207,.02); pointer-events: none; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--teal); text-transform: uppercase; letter-spacing: .14em; font-size: .76rem; font-weight: 800; }
+    .eyebrow:before { content: ""; width: 22px; height: 1px; background: currentColor; }
+    h1 { max-width: 720px; margin: 18px 0 12px; font-size: clamp(2.45rem, 6vw, 4.65rem); line-height: 1.04; letter-spacing: -.055em; }
+    .role { margin: 0; color: var(--teal); font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 650; }
+    .intro { max-width: 650px; margin: 24px 0 0; color: var(--muted); font-size: 1.05rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 0 19px; border-radius: 13px; text-decoration: none; font-weight: 750; border: 1px solid var(--line); transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #07151e; background: var(--teal); border-color: var(--teal); }
+    .btn-secondary { color: var(--ink); background: rgba(255,255,255,.035); }
+    .profile-card { border-radius: 30px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .monogram { width: 88px; height: 88px; display: grid; place-items: center; border-radius: 27px; background: linear-gradient(145deg, #71f2df, #178d9e); color: #07151e; font-size: 2rem; font-weight: 900; letter-spacing: -.08em; box-shadow: 0 16px 45px rgba(29,158,155,.25); }
+    .profile-card h2 { margin: 28px 0 2px; font-size: 1.23rem; }
+    .profile-card p { color: var(--muted); margin: 0; }
+    .mini-detail { display: flex; align-items: flex-start; gap: 11px; padding-top: 17px; margin-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: .93rem; overflow-wrap: anywhere; }
+    .mini-detail strong { display: block; color: var(--ink); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px; }
+    section { padding: 28px 0; }
+    .section-head { margin-bottom: 18px; }
+    .section-head .eyebrow { font-size: .72rem; }
+    h2.section-title { margin: 8px 0 0; font-size: clamp(1.7rem, 3vw, 2.25rem); letter-spacing: -.035em; }
+    .section-card { border-radius: var(--radius); padding: clamp(22px, 3vw, 30px); }
+    .about-text { color: var(--muted); max-width: 850px; margin: 0; font-size: 1.02rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .skill { min-height: 170px; }
+    .skill-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--teal); background: rgba(85,223,207,.1); font-weight: 900; font-size: 1.05rem; }
+    .skill h3 { margin: 17px 0 7px; font-size: 1.02rem; }
+    .skill p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .edu { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .edu h3 { margin: 0; font-size: 1.22rem; }
+    .edu p { margin: 5px 0 0; color: var(--muted); }
+    .edu-tag { padding: 8px 13px; border: 1px solid rgba(85,223,207,.28); border-radius: 999px; color: var(--teal); font-size: .85rem; white-space: nowrap; }
+    .objective { color: var(--muted); margin: 0; font-size: 1.02rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .contact-link { display: block; padding: 17px 18px; border: 1px solid var(--line); border-radius: 15px; text-decoration: none; background: rgba(255,255,255,.025); overflow-wrap: anywhere; }
+    .contact-link span { display: block; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px; }
+    .contact-link:hover { border-color: rgba(85,223,207,.5); }
+    footer { padding: 34px 0 46px; color: #7f96a5; font-size: .86rem; text-align: center; }
+    :focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+    @media (max-width: 780px) {
+      .hero { grid-template-columns: 1fr; padding-top: 28px; }
+      .profile-card { min-height: 270px; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 13px; font-size: .83rem; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 28px, 1080px); }
+      .nav { align-items: flex-start; }
+      .nav-links { display: none; }
+      .hero-copy, .profile-card { border-radius: 22px; }
+      .hero-copy { padding: 27px 23px; }
+      .grid, .contact-grid { grid-template-columns: 1fr; }
+      .skill { min-height: auto; }
+      .edu { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top"><span class="brand-mark">NZ</span><span>Nesma Zahran</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Strengths</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="wrap">
+    <div class="hero">
+      <section class="hero-copy" aria-labelledby="main-title">
+        <div class="eyebrow">Professional Portfolio</div>
+        <h1 id="main-title">Nesma El-Shenawy Zahran</h1>
+        <p class="role">AI Data Evaluation · Digital Tasks · Data Quality</p>
+        <p class="intro">Motivated university student at Tanta University with an interest in digital tasks and artificial intelligence. Seeking opportunities to contribute to AI model evaluation and training through careful text review, data quality checks, and analytical thinking.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="Nesma_ElShenawy_Zahran_CV.pdf" target="_blank" rel="noopener">View my CV ↗</a>
+        </div>
+      </section>
+
+      <aside class="profile-card" aria-label="Profile summary">
+        <div>
+          <div class="monogram" aria-hidden="true">NZ</div>
+          <h2>Careful review. Clear thinking.</h2>
+          <p>Interested in helping improve the accuracy and quality of AI outputs.</p>
+        </div>
+        <div>
+          <div class="mini-detail"><div><strong>Based in</strong>Kafr El-Sheikh, Egypt</div></div>
+          <div class="mini-detail"><div><strong>University</strong>Tanta University</div></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="section-head"><div class="eyebrow">A little about me</div><h2 class="section-title">Professional Profile</h2></div>
+      <div class="section-card">
+        <p class="about-text">I am a university student interested in artificial intelligence, digital tasks, and the quality of text and data. I aim to bring attention to detail, critical thinking, and effective communication to tasks that support AI model evaluation and training.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head"><div class="eyebrow">What I bring</div><h2 class="section-title">Core Strengths</h2></div>
+      <div class="grid">
+        <article class="section-card skill"><div class="skill-icon">01</div><h3>Text & Data Quality</h3><p>Reviewing text and data carefully, with a focus on accuracy and consistency.</p></article>
+        <article class="section-card skill"><div class="skill-icon">02</div><h3>Critical Thinking</h3><p>Applying logical analysis, problem-solving, and attention to detail.</p></article>
+        <article class="section-card skill"><div class="skill-icon">03</div><h3>Communication</h3><p>Written and spoken English, effective communication, and teamwork.</p></article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-head"><div class="eyebrow">Academic background</div><h2 class="section-title">Education</h2></div>
+      <div class="section-card edu">
+        <div><h3>Tanta University</h3><p>University Student · Egypt</p></div>
+        <span class="edu-tag">Current studies</span>
+      </div>
+    </section>
+
+    <section id="objective">
+      <div class="section-head"><div class="eyebrow">My direction</div><h2 class="section-title">Career Objective</h2></div>
+      <div class="section-card">
+        <p class="objective">To join an expert network working on AI model evaluation and training, apply careful review and analytical thinking to digital tasks, and support the continuous improvement of data quality.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head"><div class="eyebrow">Let's connect</div><h2 class="section-title">Contact</h2></div>
+      <div class="contact-grid">
+        <a class="contact-link" href="mailto:zhrank213@gmail.com"><span>Email</span>zhrank213@gmail.com</a>
+        <a class="contact-link" href="tel:+201025313965"><span>Phone</span>+20 102 531 3965</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">© Nesma El-Shenawy Zahran · Professional Portfolio</footer>
+</body>
+</html>
